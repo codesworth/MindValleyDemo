@@ -13,6 +13,7 @@ protocol DataServiceProtocol {
     
     typealias FetchResult = (Result<DataType,NetworkError>) -> Void
     func fetchData(url:URL, completion:@escaping FetchResult)
+    var assetManager:AssetManager{get}
 }
 
 

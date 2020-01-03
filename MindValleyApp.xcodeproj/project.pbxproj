@@ -15,7 +15,6 @@
 		382FF74423BEC5FA004DCF5A /* PinDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382FF74323BEC5FA004DCF5A /* PinDataController.swift */; };
 		382FF74723BECAE1004DCF5A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382FF74623BECAE1004DCF5A /* DataService.swift */; };
 		382FF74F23BED289004DCF5A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382FF74E23BED289004DCF5A /* Constants.swift */; };
-		384F1EFC23BEECE900B8E85D /* AssetLoader.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 384F1EFB23BEECE900B8E85D /* AssetLoader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3858126323BE14EA002CC9B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3858126223BE14EA002CC9B0 /* AppDelegate.swift */; };
 		3858126523BE14EA002CC9B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3858126423BE14EA002CC9B0 /* SceneDelegate.swift */; };
 		3858126723BE14EA002CC9B0 /* PinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3858126623BE14EA002CC9B0 /* PinViewController.swift */; };
@@ -23,6 +22,7 @@
 		3858126C23BE14EC002CC9B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3858126B23BE14EC002CC9B0 /* Assets.xcassets */; };
 		3858126F23BE14EC002CC9B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3858126D23BE14EC002CC9B0 /* LaunchScreen.storyboard */; };
 		3858127A23BE14EC002CC9B0 /* MindValleyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3858127923BE14EC002CC9B0 /* MindValleyAppTests.swift */; };
+		3893746A23BFD27B00731E9D /* AssetLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3893746923BFD27B00731E9D /* AssetLoader.framework */; };
 		38CB96C423BF471D00A861AB /* PinDataControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB96C323BF471D00A861AB /* PinDataControllerTest.swift */; };
 		38CB96C623BF474400A861AB /* MockServiceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB96C523BF474400A861AB /* MockServiceObject.swift */; };
 		38D1999923BED70E006505C8 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D1999823BED70E006505C8 /* Protocols.swift */; };
@@ -40,13 +40,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		38D1999C23BEE662006505C8 /* CopyFiles */ = {
+		38CB96D823BF73D900A861AB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				384F1EFC23BEECE900B8E85D /* AssetLoader.framework in CopyFiles */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		38CB96D923BF756E00A861AB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -61,7 +70,6 @@
 		382FF74323BEC5FA004DCF5A /* PinDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDataController.swift; sourceTree = "<group>"; };
 		382FF74623BECAE1004DCF5A /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		382FF74E23BED289004DCF5A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		384F1EFB23BEECE900B8E85D /* AssetLoader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AssetLoader.framework; sourceTree = "<group>"; };
 		3858125F23BE14EA002CC9B0 /* MindValleyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindValleyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3858126223BE14EA002CC9B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3858126423BE14EA002CC9B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +81,8 @@
 		3858127523BE14EC002CC9B0 /* MindValleyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindValleyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3858127923BE14EC002CC9B0 /* MindValleyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindValleyAppTests.swift; sourceTree = "<group>"; };
 		3858127B23BE14EC002CC9B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3893746323BFCE6100731E9D /* AssetLoader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetLoader.framework; path = MindValleyApp/Frameworks/AssetLoader.framework; sourceTree = "<group>"; };
+		3893746923BFD27B00731E9D /* AssetLoader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetLoader.framework; path = "../../../Library/Developer/Xcode/DerivedData/AssetLoader-ftahcfhzltqkknagpazubmokvonk/Build/Products/Debug-iphonesimulator/AssetLoader.framework"; sourceTree = "<group>"; };
 		38CB96C323BF471D00A861AB /* PinDataControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDataControllerTest.swift; sourceTree = "<group>"; };
 		38CB96C523BF474400A861AB /* MockServiceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServiceObject.swift; sourceTree = "<group>"; };
 		38D1999823BED70E006505C8 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
@@ -84,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3893746A23BFD27B00731E9D /* AssetLoader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,10 +120,10 @@
 		3858125623BE14EA002CC9B0 = {
 			isa = PBXGroup;
 			children = (
-				384F1EFB23BEECE900B8E85D /* AssetLoader.framework */,
 				3858126123BE14EA002CC9B0 /* MindValleyApp */,
 				3858127823BE14EC002CC9B0 /* MindValleyAppTests */,
 				3858126023BE14EA002CC9B0 /* Products */,
+				3893746223BFCE6100731E9D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,6 +194,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		3893746223BFCE6100731E9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3893746923BFD27B00731E9D /* AssetLoader.framework */,
+				3893746323BFCE6100731E9D /* AssetLoader.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,10 +210,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3858127E23BE14EC002CC9B0 /* Build configuration list for PBXNativeTarget "MindValleyApp" */;
 			buildPhases = (
-				38D1999C23BEE662006505C8 /* CopyFiles */,
+				38CB96D923BF756E00A861AB /* CopyFiles */,
 				3858125B23BE14EA002CC9B0 /* Sources */,
 				3858125C23BE14EA002CC9B0 /* Frameworks */,
 				3858125D23BE14EA002CC9B0 /* Resources */,
+				38CB96D823BF73D900A861AB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -465,6 +486,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MindValleyApp",
+					"$(PROJECT_DIR)/MindValleyApp/Frameworks",
 				);
 				INFOPLIST_FILE = MindValleyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -490,6 +512,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MindValleyApp",
+					"$(PROJECT_DIR)/MindValleyApp/Frameworks",
 				);
 				INFOPLIST_FILE = MindValleyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -511,6 +534,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MB46J93Q7Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MindValleyAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -533,6 +560,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MB46J93Q7Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MindValleyAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (

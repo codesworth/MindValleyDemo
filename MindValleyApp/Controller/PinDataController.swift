@@ -57,7 +57,7 @@ class PinDataController<ServiceObject:DataServiceProtocol>: NSObject, UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PinCell.Identifier, for: indexPath) as? PinCell{
             let pin = pins[indexPath.row]
-            cell.configure(pin)
+            cell.configure(pin, manager: service.assetManager, for: indexPath.row )
             return cell
         }
         return PinCell()
@@ -65,6 +65,10 @@ class PinDataController<ServiceObject:DataServiceProtocol>: NSObject, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 120)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        service.assetManager.cancel(for: indexPath.row)
     }
     
 }

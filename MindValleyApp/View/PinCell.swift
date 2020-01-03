@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AssetLoader
 
 class PinCell: UICollectionViewCell,Identity {
     
@@ -20,9 +21,13 @@ class PinCell: UICollectionViewCell,Identity {
         // Initialization code
     }
     
-    func configure(_ pin:MindValleyPin){
+    func configure(_ pin:MindValleyPin,manager:AssetManager,for index:Int){
         titleLable.text = pin.user.username
-        
+        guard let url = pin.urls.smallUrl else {return}
+        manager.downloadImage(for:url, identifier: index) { [weak self] image, _ in
+            guard let self = self else {return}
+            self.imageView.image = image
+        }
     }
 
 }
