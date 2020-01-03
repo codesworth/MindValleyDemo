@@ -23,6 +23,8 @@
 		3858126C23BE14EC002CC9B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3858126B23BE14EC002CC9B0 /* Assets.xcassets */; };
 		3858126F23BE14EC002CC9B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3858126D23BE14EC002CC9B0 /* LaunchScreen.storyboard */; };
 		3858127A23BE14EC002CC9B0 /* MindValleyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3858127923BE14EC002CC9B0 /* MindValleyAppTests.swift */; };
+		38CB96C423BF471D00A861AB /* PinDataControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB96C323BF471D00A861AB /* PinDataControllerTest.swift */; };
+		38CB96C623BF474400A861AB /* MockServiceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB96C523BF474400A861AB /* MockServiceObject.swift */; };
 		38D1999923BED70E006505C8 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D1999823BED70E006505C8 /* Protocols.swift */; };
 		38D1999B23BEDBBB006505C8 /* DataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D1999A23BEDBBB006505C8 /* DataServiceTests.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +73,8 @@
 		3858127523BE14EC002CC9B0 /* MindValleyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindValleyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3858127923BE14EC002CC9B0 /* MindValleyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindValleyAppTests.swift; sourceTree = "<group>"; };
 		3858127B23BE14EC002CC9B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38CB96C323BF471D00A861AB /* PinDataControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDataControllerTest.swift; sourceTree = "<group>"; };
+		38CB96C523BF474400A861AB /* MockServiceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServiceObject.swift; sourceTree = "<group>"; };
 		38D1999823BED70E006505C8 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		38D1999A23BEDBBB006505C8 /* DataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +150,8 @@
 				3858127923BE14EC002CC9B0 /* MindValleyAppTests.swift */,
 				3858127B23BE14EC002CC9B0 /* Info.plist */,
 				38D1999A23BEDBBB006505C8 /* DataServiceTests.swift */,
+				38CB96C323BF471D00A861AB /* PinDataControllerTest.swift */,
+				38CB96C523BF474400A861AB /* MockServiceObject.swift */,
 			);
 			path = MindValleyAppTests;
 			sourceTree = "<group>";
@@ -298,6 +304,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38CB96C623BF474400A861AB /* MockServiceObject.swift in Sources */,
+				38CB96C423BF471D00A861AB /* PinDataControllerTest.swift in Sources */,
 				3858127A23BE14EC002CC9B0 /* MindValleyAppTests.swift in Sources */,
 				38D1999B23BEDBBB006505C8 /* DataServiceTests.swift in Sources */,
 			);

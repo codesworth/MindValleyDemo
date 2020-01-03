@@ -13,11 +13,12 @@ import AssetLoader
 class PinViewController: UIViewController {
     
     @IBOutlet weak var collectionView:UICollectionView!
-    private var dataController:PinDataController!
-    
+    private var dataController:PinDataController<DataService<MindValleyPins>>!
+    private var service:DataService<MindValleyPins>!
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataController = PinDataController(collectionView: collectionView)
+        service = DataService()
+        dataController = PinDataController(service: service, collectionView: collectionView)
         dataController.owner = self
         dataController.fetchData()
     }

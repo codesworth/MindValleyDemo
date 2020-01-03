@@ -9,23 +9,18 @@
 import UIKit
 
 
-class PinDataController: NSObject {
+class PinDataController<ServiceObject:DataServiceProtocol>: NSObject, UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     
     typealias MindValleyPins = [MindValleyPin]
     weak var collectionView:UICollectionView?
     weak var owner:UIViewController?
     var pins:MindValleyPins = []
-    private var service:DataService<MindValleyPins>
+    private var service:ServiceObject
     
-    private override init() {
-        service = DataService()
-        super.init()
     
-    }
-    
-    init(collectionView:UICollectionView?) {
+    init(service:ServiceObject, collectionView:UICollectionView?) {
         self.collectionView = collectionView
-        service = DataService()
+        self.service = service
         super.init()
         setup()
     }
@@ -40,19 +35,18 @@ class PinDataController: NSObject {
             guard let self = self else {return}
             switch result{
             case .failure(let err):
+                let alert = UIAlertController(title: "Error", message: err.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.owner?.present(alert, animated: true, completion: nil)
                 break
             case .success(let pins):
-                self.pins = pins
+                self.pins = pins as! MindValleyPins
                 self.collectionView?.reloadData()
             }
         }
     }
-}
-
-
-extension PinDataController:UICollectionViewDataSource{
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
+   func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
@@ -69,12 +63,8 @@ extension PinDataController:UICollectionViewDataSource{
         return PinCell()
     }
     
-}
-
-
-extension PinDataController:UICollectionViewDelegateFlowLayout{
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 120)
     }
+    
 }

@@ -15,6 +15,11 @@ protocol DataServiceProtocol {
     func fetchData(url:URL, completion:@escaping FetchResult)
 }
 
+
+
+
+
+
 class DataService<DataType:Codable>{
     
     let assetManager:AssetManager
