@@ -1,0 +1,11 @@
+framework module AssetLoader {
+  umbrella header "AssetLoader.h"
+
+  export *
+  module * { export * }
+}
+
+module AssetLoader.Swift {
+    header "AssetLoader-Swift.h"
+    requires objc
+}
