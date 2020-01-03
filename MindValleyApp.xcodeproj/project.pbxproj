@@ -22,7 +22,6 @@
 		3858126C23BE14EC002CC9B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3858126B23BE14EC002CC9B0 /* Assets.xcassets */; };
 		3858126F23BE14EC002CC9B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3858126D23BE14EC002CC9B0 /* LaunchScreen.storyboard */; };
 		3858127A23BE14EC002CC9B0 /* MindValleyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3858127923BE14EC002CC9B0 /* MindValleyAppTests.swift */; };
-		3893746A23BFD27B00731E9D /* AssetLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3893746923BFD27B00731E9D /* AssetLoader.framework */; };
 		38CB96C423BF471D00A861AB /* PinDataControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB96C323BF471D00A861AB /* PinDataControllerTest.swift */; };
 		38CB96C623BF474400A861AB /* MockServiceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB96C523BF474400A861AB /* MockServiceObject.swift */; };
 		38D1999923BED70E006505C8 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D1999823BED70E006505C8 /* Protocols.swift */; };
@@ -36,6 +35,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3858125E23BE14EA002CC9B0;
 			remoteInfo = MindValleyApp;
+		};
+		3893747C23BFD4C300731E9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3893747723BFD4C300731E9D /* AssetLoader.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 385811EF23BD77B2002CC9B0;
+			remoteInfo = AssetLoader;
+		};
+		3893747E23BFD4C300731E9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3893747723BFD4C300731E9D /* AssetLoader.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 385811F823BD77B2002CC9B0;
+			remoteInfo = AssetLoaderTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -81,8 +94,7 @@
 		3858127523BE14EC002CC9B0 /* MindValleyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindValleyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3858127923BE14EC002CC9B0 /* MindValleyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindValleyAppTests.swift; sourceTree = "<group>"; };
 		3858127B23BE14EC002CC9B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3893746323BFCE6100731E9D /* AssetLoader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetLoader.framework; path = MindValleyApp/Frameworks/AssetLoader.framework; sourceTree = "<group>"; };
-		3893746923BFD27B00731E9D /* AssetLoader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetLoader.framework; path = "../../../Library/Developer/Xcode/DerivedData/AssetLoader-ftahcfhzltqkknagpazubmokvonk/Build/Products/Debug-iphonesimulator/AssetLoader.framework"; sourceTree = "<group>"; };
+		3893747723BFD4C300731E9D /* AssetLoader.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AssetLoader.xcodeproj; path = ../AssetLoader/AssetLoader.xcodeproj; sourceTree = "<group>"; };
 		38CB96C323BF471D00A861AB /* PinDataControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDataControllerTest.swift; sourceTree = "<group>"; };
 		38CB96C523BF474400A861AB /* MockServiceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServiceObject.swift; sourceTree = "<group>"; };
 		38D1999823BED70E006505C8 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
@@ -94,7 +106,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3893746A23BFD27B00731E9D /* AssetLoader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,10 +131,10 @@
 		3858125623BE14EA002CC9B0 = {
 			isa = PBXGroup;
 			children = (
+				3893747723BFD4C300731E9D /* AssetLoader.xcodeproj */,
 				3858126123BE14EA002CC9B0 /* MindValleyApp */,
 				3858127823BE14EC002CC9B0 /* MindValleyAppTests */,
 				3858126023BE14EA002CC9B0 /* Products */,
-				3893746223BFCE6100731E9D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,13 +205,13 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		3893746223BFCE6100731E9D /* Frameworks */ = {
+		3893747823BFD4C300731E9D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3893746923BFD27B00731E9D /* AssetLoader.framework */,
-				3893746323BFCE6100731E9D /* AssetLoader.framework */,
+				3893747D23BFD4C300731E9D /* AssetLoader.framework */,
+				3893747F23BFD4C300731E9D /* AssetLoaderTests.xctest */,
 			);
-			name = Frameworks;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +284,12 @@
 			mainGroup = 3858125623BE14EA002CC9B0;
 			productRefGroup = 3858126023BE14EA002CC9B0 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3893747823BFD4C300731E9D /* Products */;
+					ProjectRef = 3893747723BFD4C300731E9D /* AssetLoader.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3858125E23BE14EA002CC9B0 /* MindValleyApp */,
@@ -280,6 +297,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3893747D23BFD4C300731E9D /* AssetLoader.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AssetLoader.framework;
+			remoteRef = 3893747C23BFD4C300731E9D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3893747F23BFD4C300731E9D /* AssetLoaderTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AssetLoaderTests.xctest;
+			remoteRef = 3893747E23BFD4C300731E9D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3858125D23BE14EA002CC9B0 /* Resources */ = {
@@ -412,7 +446,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -466,7 +500,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -489,6 +523,7 @@
 					"$(PROJECT_DIR)/MindValleyApp/Frameworks",
 				);
 				INFOPLIST_FILE = MindValleyApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -515,6 +550,7 @@
 					"$(PROJECT_DIR)/MindValleyApp/Frameworks",
 				);
 				INFOPLIST_FILE = MindValleyApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

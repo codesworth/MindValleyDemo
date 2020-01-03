@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import AssetLoader
 
 class PinDataController<ServiceObject:DataServiceProtocol>: NSObject, UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     
@@ -16,11 +16,17 @@ class PinDataController<ServiceObject:DataServiceProtocol>: NSObject, UICollecti
     weak var owner:UIViewController?
     var pins:MindValleyPins = []
     private var service:ServiceObject
+    let refreshControl = UIRefreshControl()
+    private var cursor = Cursor(limit: 2) {
+        guard let lhs = $0 as? MindValleyPin, let rhs = $1 as? MindValleyPin else {return false}
+        return lhs < rhs
+    }
     
     
-    init(service:ServiceObject, collectionView:UICollectionView?) {
+    init(service:ServiceObject, collectionView:UICollectionView?, cursor:Cursor? = nil) {
         self.collectionView = collectionView
         self.service = service
+        if let cursor = cursor {self.cursor = cursor}
         super.init()
         setup()
     }
@@ -28,21 +34,43 @@ class PinDataController<ServiceObject:DataServiceProtocol>: NSObject, UICollecti
     func setup(){
         collectionView?.delegate = self
         collectionView?.dataSource = self
+        refreshControl.addTarget(self, action: #selector(fetchData), for: .valueChanged)
+        collectionView?.refreshControl = refreshControl
     }
     
-    func fetchData(){
+    @objc func fetchData(){
         service.fetchData(url: Constants.dataUrl) {[weak self] (result) in
             guard let self = self else {return}
-            switch result{
-            case .failure(let err):
-                let alert = UIAlertController(title: "Error", message: err.localizedDescription, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                self.owner?.present(alert, animated: true, completion: nil)
-                break
-            case .success(let pins):
-                self.pins = pins as! MindValleyPins
+            self.resolveResult(result: result, changeCursor: false)
+            
+        }
+    }
+    
+    func resolveResult(result:Result<ServiceObject.DataType, NetworkError>, changeCursor:Bool){
+        if refreshControl.isRefreshing{refreshControl.endRefreshing()}
+        switch result{
+        case .failure(let err):
+            let alert = UIAlertController(title: "Error", message: err.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.owner?.present(alert, animated: true, completion: nil)
+            break
+        case .success(let pins):
+            if let mindvalleyPins = pins as? MindValleyPins{
+                if changeCursor{
+                    self.pins.append(contentsOf: mindvalleyPins)
+                    cursor.next()
+                }else{
+                    self.pins = mindvalleyPins
+                }
                 self.collectionView?.reloadData()
             }
+        }
+    }
+    
+    func fetchMoreData(){
+        service.fetchData(url: Constants.dataUrl, with: cursor) {[weak self] (result) in
+            guard let self = self else {return}
+            self.resolveResult(result: result, changeCursor: true)
         }
     }
     

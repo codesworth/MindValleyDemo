@@ -22,6 +22,11 @@ class PinViewController: UIViewController {
         dataController.owner = self
         dataController.fetchData()
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
+    
 
 
 }

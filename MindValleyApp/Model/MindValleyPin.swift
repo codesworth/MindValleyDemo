@@ -25,6 +25,10 @@ struct MindValleyPin:Codable {
     
     let categories: [PinCategory]
     
+    var dateCreated:Date{
+        return Date()
+    }
+    
     
 }
 
@@ -62,3 +66,18 @@ extension MindValleyPin{
     }
 }
 
+
+
+extension MindValleyPin:Comparable{
+    
+    static func < (lhs: MindValleyPin, rhs: MindValleyPin) -> Bool {
+        return lhs.dateCreated < rhs.dateCreated
+    }
+    
+    static func == (lhs: MindValleyPin, rhs: MindValleyPin) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    
+    
+}

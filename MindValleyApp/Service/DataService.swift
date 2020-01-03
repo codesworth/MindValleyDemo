@@ -13,6 +13,7 @@ protocol DataServiceProtocol {
     
     typealias FetchResult = (Result<DataType,NetworkError>) -> Void
     func fetchData(url:URL, completion:@escaping FetchResult)
+    func fetchData(url:URL, with cursor:Cursor, completion:@escaping FetchResult)
     var assetManager:AssetManager{get}
 }
 
@@ -44,6 +45,16 @@ extension DataService:DataServiceProtocol{
                 return
             }
             completion(.success(data))
+        }
+    }
+    
+    func fetchData(url: URL, with cursor: Cursor, completion: @escaping (Result<DataType, NetworkError>) -> Void) {
+        assetManager.download(from: url, for: DataType.self, with: cursor) {  (data, err) in
+           guard let data = data, err == nil else {
+               completion(.failure(NetworkError(err)))
+               return
+           }
+           completion(.success(data))
         }
     }
     
