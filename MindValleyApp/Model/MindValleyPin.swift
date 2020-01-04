@@ -9,6 +9,8 @@
 import Foundation
 
 typealias MindValleyPins = [MindValleyPin]
+
+let formatForDate = "yyyy-MM-dd'T'HH:mm:ssZ"
 struct MindValleyPin:Codable {
     
     
@@ -26,7 +28,10 @@ struct MindValleyPin:Codable {
     let categories: [PinCategory]
     
     var dateCreated:Date{
-        return Date()
+        let dateFormtter = DateFormatter()
+        dateFormtter.dateFormat = formatForDate
+        dateFormtter.locale = .init(identifier: "en_US")
+        return dateFormtter.date(from: created_at)!
     }
     
     
@@ -54,12 +59,15 @@ extension MindValleyPin{
             return URL(string: regular)
         }
         
+        var fullUrl:URL?{
+            return URL(string: full)
+        }
         
     }
 
 
     struct PinCategory:Codable {
-        let id:String
+        let id:Int
         let title:String
         let photo_count:Int
         

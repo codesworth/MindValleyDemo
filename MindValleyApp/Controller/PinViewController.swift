@@ -18,8 +18,10 @@ class PinViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         service = DataService()
+        collectionView.register(UINib(nibName: PinCell.Identifier, bundle: nil), forCellWithReuseIdentifier: PinCell.Identifier)
         dataController = PinDataController(service: service, collectionView: collectionView)
         dataController.owner = self
+        dataController.delegate = self
         dataController.fetchData()
     }
     
@@ -31,3 +33,15 @@ class PinViewController: UIViewController {
 
 }
 
+
+extension PinViewController:PinDataControllerDelegate{
+    
+    func didSelectPin(_ pin: MindValleyPin, with Image: UIImage?) {
+        if let fullVc = storyboard?.instantiateViewController(withIdentifier: PhotoFullScreenVC.Identifier) as? PhotoFullScreenVC{
+            fullVc.pin = pin
+            fullVc.placeHolderImage = Image
+            present(fullVc, animated: true, completion: nil)
+        }
+    }
+    
+}

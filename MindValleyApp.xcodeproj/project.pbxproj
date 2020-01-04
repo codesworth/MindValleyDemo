@@ -15,6 +15,12 @@
 		382FF74423BEC5FA004DCF5A /* PinDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382FF74323BEC5FA004DCF5A /* PinDataController.swift */; };
 		382FF74723BECAE1004DCF5A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382FF74623BECAE1004DCF5A /* DataService.swift */; };
 		382FF74F23BED289004DCF5A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382FF74E23BED289004DCF5A /* Constants.swift */; };
+		384A00E723C093CF00FE470C /* SizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384A00E623C093CF00FE470C /* SizeCalculator.swift */; };
+		384A00E923C0A28E00FE470C /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384A00E823C0A28E00FE470C /* UIView+Extensions.swift */; };
+		384A00EE23C0E7D400FE470C /* ZoomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384A00EB23C0E7D300FE470C /* ZoomAnimator.swift */; };
+		384A00EF23C0E7D400FE470C /* ZoomTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384A00EC23C0E7D300FE470C /* ZoomTransitionController.swift */; };
+		384A00F023C0E7D400FE470C /* ZoomDismissalInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384A00ED23C0E7D300FE470C /* ZoomDismissalInteractionController.swift */; };
+		384A00F223C0EBA900FE470C /* PhotoFullScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384A00F123C0EBA900FE470C /* PhotoFullScreenVC.swift */; };
 		3858126323BE14EA002CC9B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3858126223BE14EA002CC9B0 /* AppDelegate.swift */; };
 		3858126523BE14EA002CC9B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3858126423BE14EA002CC9B0 /* SceneDelegate.swift */; };
 		3858126723BE14EA002CC9B0 /* PinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3858126623BE14EA002CC9B0 /* PinViewController.swift */; };
@@ -36,20 +42,6 @@
 			remoteGlobalIDString = 3858125E23BE14EA002CC9B0;
 			remoteInfo = MindValleyApp;
 		};
-		3893747C23BFD4C300731E9D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3893747723BFD4C300731E9D /* AssetLoader.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 385811EF23BD77B2002CC9B0;
-			remoteInfo = AssetLoader;
-		};
-		3893747E23BFD4C300731E9D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3893747723BFD4C300731E9D /* AssetLoader.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 385811F823BD77B2002CC9B0;
-			remoteInfo = AssetLoaderTests;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,15 +55,6 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 1;
 		};
-		38CB96D923BF756E00A861AB /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 8;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +66,13 @@
 		382FF74323BEC5FA004DCF5A /* PinDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDataController.swift; sourceTree = "<group>"; };
 		382FF74623BECAE1004DCF5A /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		382FF74E23BED289004DCF5A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		384A00E223C07C1900FE470C /* AssetLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AssetLoader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		384A00E623C093CF00FE470C /* SizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCalculator.swift; sourceTree = "<group>"; };
+		384A00E823C0A28E00FE470C /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		384A00EB23C0E7D300FE470C /* ZoomAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomAnimator.swift; sourceTree = "<group>"; };
+		384A00EC23C0E7D300FE470C /* ZoomTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomTransitionController.swift; sourceTree = "<group>"; };
+		384A00ED23C0E7D300FE470C /* ZoomDismissalInteractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomDismissalInteractionController.swift; sourceTree = "<group>"; };
+		384A00F123C0EBA900FE470C /* PhotoFullScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFullScreenVC.swift; sourceTree = "<group>"; };
 		3858125F23BE14EA002CC9B0 /* MindValleyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindValleyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3858126223BE14EA002CC9B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3858126423BE14EA002CC9B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,7 +84,6 @@
 		3858127523BE14EC002CC9B0 /* MindValleyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindValleyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3858127923BE14EC002CC9B0 /* MindValleyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindValleyAppTests.swift; sourceTree = "<group>"; };
 		3858127B23BE14EC002CC9B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3893747723BFD4C300731E9D /* AssetLoader.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AssetLoader.xcodeproj; path = ../AssetLoader/AssetLoader.xcodeproj; sourceTree = "<group>"; };
 		38CB96C323BF471D00A861AB /* PinDataControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDataControllerTest.swift; sourceTree = "<group>"; };
 		38CB96C523BF474400A861AB /* MockServiceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServiceObject.swift; sourceTree = "<group>"; };
 		38D1999823BED70E006505C8 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
@@ -122,19 +111,38 @@
 		382FF74523BECAD0004DCF5A /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				38D1999823BED70E006505C8 /* Protocols.swift */,
 				382FF74623BECAE1004DCF5A /* DataService.swift */,
 				382FF74E23BED289004DCF5A /* Constants.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
 		};
+		384A00E123C07C1900FE470C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				384A00E223C07C1900FE470C /* AssetLoader.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		384A00EA23C0E72800FE470C /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				384A00EB23C0E7D300FE470C /* ZoomAnimator.swift */,
+				384A00ED23C0E7D300FE470C /* ZoomDismissalInteractionController.swift */,
+				384A00EC23C0E7D300FE470C /* ZoomTransitionController.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
 		3858125623BE14EA002CC9B0 = {
 			isa = PBXGroup;
 			children = (
-				3893747723BFD4C300731E9D /* AssetLoader.xcodeproj */,
 				3858126123BE14EA002CC9B0 /* MindValleyApp */,
 				3858127823BE14EC002CC9B0 /* MindValleyAppTests */,
 				3858126023BE14EA002CC9B0 /* Products */,
+				384A00E123C07C1900FE470C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,18 +158,14 @@
 		3858126123BE14EA002CC9B0 /* MindValleyApp */ = {
 			isa = PBXGroup;
 			children = (
+				384A00EA23C0E72800FE470C /* Transition */,
+				3860A47323BFE1F900752697 /* App */,
 				382FF74523BECAD0004DCF5A /* Service */,
 				3858128F23BE153D002CC9B0 /* Controller */,
 				3858128E23BE1537002CC9B0 /* View */,
 				3858128D23BE152E002CC9B0 /* Model */,
-				3858126223BE14EA002CC9B0 /* AppDelegate.swift */,
-				3858126423BE14EA002CC9B0 /* SceneDelegate.swift */,
-				3858126623BE14EA002CC9B0 /* PinViewController.swift */,
-				3858126823BE14EA002CC9B0 /* Main.storyboard */,
-				3858126B23BE14EC002CC9B0 /* Assets.xcassets */,
 				3858126D23BE14EC002CC9B0 /* LaunchScreen.storyboard */,
 				3858127023BE14EC002CC9B0 /* Info.plist */,
-				38D1999823BED70E006505C8 /* Protocols.swift */,
 			);
 			path = MindValleyApp;
 			sourceTree = "<group>";
@@ -181,6 +185,7 @@
 		3858128D23BE152E002CC9B0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				384A00E623C093CF00FE470C /* SizeCalculator.swift */,
 				3815D72F23BE513100C93E2B /* MindValleyPin.swift */,
 				382FF73E23BEC1AF004DCF5A /* User.swift */,
 			);
@@ -190,9 +195,12 @@
 		3858128E23BE1537002CC9B0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3858126823BE14EA002CC9B0 /* Main.storyboard */,
 				3815D73123BE7D3C00C93E2B /* PinCellsLayoutView.swift */,
 				382FF73A23BEBF88004DCF5A /* PinCell.swift */,
 				382FF73B23BEBF88004DCF5A /* PinCell.xib */,
+				3858126B23BE14EC002CC9B0 /* Assets.xcassets */,
+				384A00E823C0A28E00FE470C /* UIView+Extensions.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -200,18 +208,20 @@
 		3858128F23BE153D002CC9B0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3858126623BE14EA002CC9B0 /* PinViewController.swift */,
 				382FF74323BEC5FA004DCF5A /* PinDataController.swift */,
+				384A00F123C0EBA900FE470C /* PhotoFullScreenVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		3893747823BFD4C300731E9D /* Products */ = {
+		3860A47323BFE1F900752697 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				3893747D23BFD4C300731E9D /* AssetLoader.framework */,
-				3893747F23BFD4C300731E9D /* AssetLoaderTests.xctest */,
+				3858126223BE14EA002CC9B0 /* AppDelegate.swift */,
+				3858126423BE14EA002CC9B0 /* SceneDelegate.swift */,
 			);
-			name = Products;
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +231,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3858127E23BE14EC002CC9B0 /* Build configuration list for PBXNativeTarget "MindValleyApp" */;
 			buildPhases = (
-				38CB96D923BF756E00A861AB /* CopyFiles */,
 				3858125B23BE14EA002CC9B0 /* Sources */,
 				3858125C23BE14EA002CC9B0 /* Frameworks */,
 				3858125D23BE14EA002CC9B0 /* Resources */,
@@ -284,12 +293,6 @@
 			mainGroup = 3858125623BE14EA002CC9B0;
 			productRefGroup = 3858126023BE14EA002CC9B0 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 3893747823BFD4C300731E9D /* Products */;
-					ProjectRef = 3893747723BFD4C300731E9D /* AssetLoader.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				3858125E23BE14EA002CC9B0 /* MindValleyApp */,
@@ -297,23 +300,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		3893747D23BFD4C300731E9D /* AssetLoader.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AssetLoader.framework;
-			remoteRef = 3893747C23BFD4C300731E9D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3893747F23BFD4C300731E9D /* AssetLoaderTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = AssetLoaderTests.xctest;
-			remoteRef = 3893747E23BFD4C300731E9D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3858125D23BE14EA002CC9B0 /* Resources */ = {
@@ -344,7 +330,12 @@
 				382FF74723BECAE1004DCF5A /* DataService.swift in Sources */,
 				3858126723BE14EA002CC9B0 /* PinViewController.swift in Sources */,
 				3858126323BE14EA002CC9B0 /* AppDelegate.swift in Sources */,
+				384A00EE23C0E7D400FE470C /* ZoomAnimator.swift in Sources */,
 				38D1999923BED70E006505C8 /* Protocols.swift in Sources */,
+				384A00F023C0E7D400FE470C /* ZoomDismissalInteractionController.swift in Sources */,
+				384A00E723C093CF00FE470C /* SizeCalculator.swift in Sources */,
+				384A00E923C0A28E00FE470C /* UIView+Extensions.swift in Sources */,
+				384A00EF23C0E7D400FE470C /* ZoomTransitionController.swift in Sources */,
 				382FF74F23BED289004DCF5A /* Constants.swift in Sources */,
 				3815D73023BE513100C93E2B /* MindValleyPin.swift in Sources */,
 				382FF73C23BEBF88004DCF5A /* PinCell.swift in Sources */,
@@ -352,6 +343,7 @@
 				3858126523BE14EA002CC9B0 /* SceneDelegate.swift in Sources */,
 				382FF73F23BEC1B0004DCF5A /* User.swift in Sources */,
 				382FF74423BEC5FA004DCF5A /* PinDataController.swift in Sources */,
+				384A00F223C0EBA900FE470C /* PhotoFullScreenVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
