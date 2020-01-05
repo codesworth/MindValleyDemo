@@ -12,7 +12,7 @@ import AssetLoader
 
 protocol PinDataControllerDelegate:class {
     
-    func didSelectPin(_ pin:MindValleyPin, with Image:UIImage?)
+    func didSelectPin(_ pin:MindValleyPin, with image:UIImage?, for cell:PinCell)
 }
 
 class PinDataController<ServiceObject:DataServiceProtocol>: NSObject, UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
@@ -51,10 +51,7 @@ class PinDataController<ServiceObject:DataServiceProtocol>: NSObject, UICollecti
     }
     
     @objc func fetchData(){
-        cursor = Cursor(limit: 10) {
-            guard let lhs = $0 as? MindValleyPin, let rhs = $1 as? MindValleyPin else {return false}
-            return lhs > rhs
-        }
+        cursor = Cursor(limit: 10)
         service.fetchData(url: Constants.dataUrl, with: cursor) {[weak self] (result) in
             guard let self = self else {return}
             self.resolveResult(result: result, changeCursor: false)
@@ -82,7 +79,7 @@ class PinDataController<ServiceObject:DataServiceProtocol>: NSObject, UICollecti
                     self.flowLayout?.invalidateLayout()
                 }else{
                     indexPaths = mindvalleyPins.enumerated().compactMap{IndexPath(row: $0.offset, section: 0)}
-                    self.pins = mindvalleyPins
+                    self.pins = mindvalleyPins.shuffled()
                 }
                collectionView?.performBatchUpdates({
                    collectionView?.insertItems(at: indexPaths)
@@ -128,8 +125,9 @@ class PinDataController<ServiceObject:DataServiceProtocol>: NSObject, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let pin = pins[indexPath.row]
-        let image = (collectionView.cellForItem(at: indexPath) as? PinCell)?.imageView.image
-        delegate?.didSelectPin(pin, with: image)
+        let cell = collectionView.cellForItem(at: indexPath) as! PinCell
+        let image = cell.imageView.image
+        delegate?.didSelectPin(pin, with: image, for: cell)
     }
 
     

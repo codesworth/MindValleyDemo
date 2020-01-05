@@ -15,6 +15,14 @@ import AssetLoader
 
 
 class MockServiceObject:DataServiceProtocol{
+    func fetchData(url: URL, with cursor: Cursor, completion: @escaping (Result<MindValleyPins, NetworkError>) -> Void) {
+        <#code#>
+    }
+    
+    var assetManager: AssetManager{
+        return AssetManager()
+    }
+    
     
     var dummyData:MindValleyPins = []
     

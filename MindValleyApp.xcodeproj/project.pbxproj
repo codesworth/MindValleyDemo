@@ -17,10 +17,8 @@
 		382FF74F23BED289004DCF5A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382FF74E23BED289004DCF5A /* Constants.swift */; };
 		384A00E723C093CF00FE470C /* SizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384A00E623C093CF00FE470C /* SizeCalculator.swift */; };
 		384A00E923C0A28E00FE470C /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384A00E823C0A28E00FE470C /* UIView+Extensions.swift */; };
-		384A00EE23C0E7D400FE470C /* ZoomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384A00EB23C0E7D300FE470C /* ZoomAnimator.swift */; };
-		384A00EF23C0E7D400FE470C /* ZoomTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384A00EC23C0E7D300FE470C /* ZoomTransitionController.swift */; };
-		384A00F023C0E7D400FE470C /* ZoomDismissalInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384A00ED23C0E7D300FE470C /* ZoomDismissalInteractionController.swift */; };
 		384A00F223C0EBA900FE470C /* PhotoFullScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384A00F123C0EBA900FE470C /* PhotoFullScreenVC.swift */; };
+		384A00F423C10BC600FE470C /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384A00F323C10BC600FE470C /* Animator.swift */; };
 		3858126323BE14EA002CC9B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3858126223BE14EA002CC9B0 /* AppDelegate.swift */; };
 		3858126523BE14EA002CC9B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3858126423BE14EA002CC9B0 /* SceneDelegate.swift */; };
 		3858126723BE14EA002CC9B0 /* PinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3858126623BE14EA002CC9B0 /* PinViewController.swift */; };
@@ -69,10 +67,8 @@
 		384A00E223C07C1900FE470C /* AssetLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AssetLoader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		384A00E623C093CF00FE470C /* SizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCalculator.swift; sourceTree = "<group>"; };
 		384A00E823C0A28E00FE470C /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		384A00EB23C0E7D300FE470C /* ZoomAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomAnimator.swift; sourceTree = "<group>"; };
-		384A00EC23C0E7D300FE470C /* ZoomTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomTransitionController.swift; sourceTree = "<group>"; };
-		384A00ED23C0E7D300FE470C /* ZoomDismissalInteractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomDismissalInteractionController.swift; sourceTree = "<group>"; };
 		384A00F123C0EBA900FE470C /* PhotoFullScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFullScreenVC.swift; sourceTree = "<group>"; };
+		384A00F323C10BC600FE470C /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		3858125F23BE14EA002CC9B0 /* MindValleyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindValleyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3858126223BE14EA002CC9B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3858126423BE14EA002CC9B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,9 +125,7 @@
 		384A00EA23C0E72800FE470C /* Transition */ = {
 			isa = PBXGroup;
 			children = (
-				384A00EB23C0E7D300FE470C /* ZoomAnimator.swift */,
-				384A00ED23C0E7D300FE470C /* ZoomDismissalInteractionController.swift */,
-				384A00EC23C0E7D300FE470C /* ZoomTransitionController.swift */,
+				384A00F323C10BC600FE470C /* Animator.swift */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -329,13 +323,11 @@
 			files = (
 				382FF74723BECAE1004DCF5A /* DataService.swift in Sources */,
 				3858126723BE14EA002CC9B0 /* PinViewController.swift in Sources */,
+				384A00F423C10BC600FE470C /* Animator.swift in Sources */,
 				3858126323BE14EA002CC9B0 /* AppDelegate.swift in Sources */,
-				384A00EE23C0E7D400FE470C /* ZoomAnimator.swift in Sources */,
 				38D1999923BED70E006505C8 /* Protocols.swift in Sources */,
-				384A00F023C0E7D400FE470C /* ZoomDismissalInteractionController.swift in Sources */,
 				384A00E723C093CF00FE470C /* SizeCalculator.swift in Sources */,
 				384A00E923C0A28E00FE470C /* UIView+Extensions.swift in Sources */,
-				384A00EF23C0E7D400FE470C /* ZoomTransitionController.swift in Sources */,
 				382FF74F23BED289004DCF5A /* Constants.swift in Sources */,
 				3815D73023BE513100C93E2B /* MindValleyPin.swift in Sources */,
 				382FF73C23BEBF88004DCF5A /* PinCell.swift in Sources */,
