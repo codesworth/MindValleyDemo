@@ -36,6 +36,8 @@ class Animator:NSObject,UIViewControllerAnimatedTransitioning{
             pincellview.transform = scaleTransform
             pincellview.center = CGPoint(x: initialFrame.midX, y: initialFrame.midY)
             
+        }else{
+            pincellview.alpha = 0
         }
         
         containerView.addSubview(intermediateView!)
@@ -48,6 +50,12 @@ class Animator:NSObject,UIViewControllerAnimatedTransitioning{
             
             transitionContext.completeTransition(true)
         }
+    }
+    
+    func transitionForDismissing(context:UIViewControllerContextTransitioning){
+        
+        
+        
     }
     
 }

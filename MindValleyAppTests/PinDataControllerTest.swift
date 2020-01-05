@@ -29,6 +29,7 @@ class PinDataControllerTest: XCTestCase {
         sut.fetchData()
         XCTAssertEqual(sut.pins[0].id, "0")
     }
+    
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.

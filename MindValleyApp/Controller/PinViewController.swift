@@ -64,7 +64,8 @@ extension PinViewController:UIViewControllerTransitioningDelegate{
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.isPresenting = false
+        return transition
         
-        return nil
     }
 }

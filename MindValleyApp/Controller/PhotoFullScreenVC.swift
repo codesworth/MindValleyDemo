@@ -21,6 +21,7 @@ class PhotoFullScreenVC:UIViewController{
     @IBOutlet weak var userProfileImageView: UIImageView!
     @IBOutlet weak var fullScreenImageView: UIImageView!
     @IBOutlet weak var containerView: UIView!
+    var originalFrame:CGRect!
     
     var pin:MindValleyPin?
     var placeHolderImage:UIImage?
@@ -28,12 +29,20 @@ class PhotoFullScreenVC:UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         updateView()
+        attachPangesture()
+        
+        view.clipsToBounds = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapped(_:)))
         tap.numberOfTouchesRequired = 1
         view.addGestureRecognizer(tap)
         view.backgroundColor = .clear
         let blurEffect = UIBlurEffect(style: .dark)
         blurview.effect = blurEffect
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        originalFrame = view.frame
     }
     
     @objc func tapped(_ recognizer:UITapGestureRecognizer){
@@ -67,6 +76,42 @@ class PhotoFullScreenVC:UIViewController{
         
         
         
+    }
+    
+    func attachPangesture(){
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(panned(_:)))
+        view.addGestureRecognizer(pan)
+    }
+    
+    @objc func panned(_ recognizer:UIPanGestureRecognizer){
+        
+        guard let view = recognizer.view else {return}
+        
+        let translation = recognizer.translation(in: view)
+        print(translation.y)
+        let finalPoint = view.frame.origin + translation
+        view.frame.origin.y = max(finalPoint.y, 120)
+        view.frame = CGRect(origin: view.frame.origin, size: CGSize(width: view.frame.height, height: view.frame.height))
+        view.frame.size = CGSize(width: max(view.frame.width - (translation.y * 2), 40), height: max(view.frame.height - (translation.y * 2), 40))
+        view.center = CGPoint(x: originalFrame.midX, y: originalFrame.midY)
+        if view.frame.width == 40 {view.center  = view.center + translation}
+        view.layer.cornerRadius = view.frame.width / 2
+        if recognizer.state == .began{
+            containerView.isHidden = true
+        }
+        if recognizer.state == .ended{
+            if  view.frame.width < 300 {
+                fullScreenImageView.contentMode = .scaleAspectFill
+                dismiss(animated: true, completion: nil)
+            }else {
+                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.2, options: .curveEaseInOut, animations: {
+                    view.layer.cornerRadius = 0
+                    view.frame = self.originalFrame
+                    self.containerView.isHidden = false
+                }, completion: nil)
+            }
+        }
+        recognizer.setTranslation(.zero, in: view)
     }
     
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		380763D023C22528000DDB92 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380763CF23C22528000DDB92 /* CGPoint+Extensions.swift */; };
 		3815D73023BE513100C93E2B /* MindValleyPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3815D72F23BE513100C93E2B /* MindValleyPin.swift */; };
 		3815D73223BE7D3C00C93E2B /* PinCellsLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3815D73123BE7D3C00C93E2B /* PinCellsLayoutView.swift */; };
 		382FF73C23BEBF88004DCF5A /* PinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382FF73A23BEBF88004DCF5A /* PinCell.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		380763CF23C22528000DDB92 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
 		3815D72F23BE513100C93E2B /* MindValleyPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindValleyPin.swift; sourceTree = "<group>"; };
 		3815D73123BE7D3C00C93E2B /* PinCellsLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCellsLayoutView.swift; sourceTree = "<group>"; };
 		382FF73A23BEBF88004DCF5A /* PinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCell.swift; sourceTree = "<group>"; };
@@ -104,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		380763CE23C22487000DDB92 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				380763CF23C22528000DDB92 /* CGPoint+Extensions.swift */,
+				384A00E823C0A28E00FE470C /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		382FF74523BECAD0004DCF5A /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,13 +163,13 @@
 		3858126123BE14EA002CC9B0 /* MindValleyApp */ = {
 			isa = PBXGroup;
 			children = (
+				380763CE23C22487000DDB92 /* Extensions */,
 				384A00EA23C0E72800FE470C /* Transition */,
 				3860A47323BFE1F900752697 /* App */,
 				382FF74523BECAD0004DCF5A /* Service */,
-				3858128F23BE153D002CC9B0 /* Controller */,
-				3858128E23BE1537002CC9B0 /* View */,
 				3858128D23BE152E002CC9B0 /* Model */,
-				3858126D23BE14EC002CC9B0 /* LaunchScreen.storyboard */,
+				3858128E23BE1537002CC9B0 /* View */,
+				3858128F23BE153D002CC9B0 /* Controller */,
 				3858127023BE14EC002CC9B0 /* Info.plist */,
 			);
 			path = MindValleyApp;
@@ -193,8 +204,6 @@
 				3815D73123BE7D3C00C93E2B /* PinCellsLayoutView.swift */,
 				382FF73A23BEBF88004DCF5A /* PinCell.swift */,
 				382FF73B23BEBF88004DCF5A /* PinCell.xib */,
-				3858126B23BE14EC002CC9B0 /* Assets.xcassets */,
-				384A00E823C0A28E00FE470C /* UIView+Extensions.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +221,8 @@
 		3860A47323BFE1F900752697 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				3858126D23BE14EC002CC9B0 /* LaunchScreen.storyboard */,
+				3858126B23BE14EC002CC9B0 /* Assets.xcassets */,
 				3858126223BE14EA002CC9B0 /* AppDelegate.swift */,
 				3858126423BE14EA002CC9B0 /* SceneDelegate.swift */,
 			);
@@ -323,6 +334,7 @@
 			files = (
 				382FF74723BECAE1004DCF5A /* DataService.swift in Sources */,
 				3858126723BE14EA002CC9B0 /* PinViewController.swift in Sources */,
+				380763D023C22528000DDB92 /* CGPoint+Extensions.swift in Sources */,
 				384A00F423C10BC600FE470C /* Animator.swift in Sources */,
 				3858126323BE14EA002CC9B0 /* AppDelegate.swift in Sources */,
 				38D1999923BED70E006505C8 /* Protocols.swift in Sources */,
