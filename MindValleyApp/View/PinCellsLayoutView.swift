@@ -8,7 +8,6 @@
 
 import UIKit
 
-import UIKit
 
 protocol PinCellsLayoutDelegate:class {
     func
